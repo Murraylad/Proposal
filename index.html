@@ -985,7 +985,7 @@
     <div class="hero">
         <h1>Clean & Tidy Services</h1>
         <p>Your Complete Business Management Platform</p>
-        <div class="tagline">Web App • iOS App • Android App</div>
+        <div class="tagline">Website • Web App • iOS App • Android App</div>
     </div>
 
     <div class="container">
@@ -996,7 +996,12 @@
                 <p>One platform across all devices to manage your entire business</p>
             </div>
 
-            <div class="platform-grid">
+            <div class="platform-grid" style="grid-template-columns: repeat(4, 1fr);">
+                <div class="platform-card">
+                    <div class="icon">🌐</div>
+                    <h3>Business Website</h3>
+                    <p>Professional website with hosting included at no extra cost</p>
+                </div>
                 <div class="platform-card">
                     <div class="icon">🖥️</div>
                     <h3>Web Dashboard</h3>
@@ -1359,44 +1364,44 @@
                     </thead>
                     <tbody>
                         <tr class="highlight">
+                            <td><strong>Business website included</strong></td>
+                            <td><span class="check">✓</span> Professional website + hosting</td>
+                            <td><span class="cross">✗</span> Software only (pay extra for website)</td>
+                        </tr>
+                        <tr>
                             <td><strong>Built for your business</strong></td>
                             <td><span class="check">✓</span> Custom-designed for Clean & Tidy</td>
                             <td><span class="cross">✗</span> Generic, one-size-fits-all</td>
                         </tr>
-                        <tr>
+                        <tr class="highlight">
                             <td><strong>Native mobile apps</strong></td>
                             <td><span class="check">✓</span> iOS & Android native apps</td>
                             <td>Web-based or limited apps</td>
                         </tr>
-                        <tr class="highlight">
+                        <tr>
                             <td><strong>Custom features</strong></td>
                             <td><span class="check">✓</span> Can be added anytime</td>
                             <td><span class="cross">✗</span> Stuck with what they offer</td>
                         </tr>
-                        <tr>
+                        <tr class="highlight">
                             <td><strong>Your branding</strong></td>
                             <td><span class="check">✓</span> 100% your brand identity</td>
                             <td>Their branding visible</td>
                         </tr>
-                        <tr class="highlight">
-                            <td><strong>Per-user fees</strong></td>
-                            <td><span class="check">✓</span> Unlimited users included</td>
-                            <td><span class="cross">✗</span> Pay per user (adds up fast)</td>
-                        </tr>
                         <tr>
+                            <td><strong>Flexible pricing</strong></td>
+                            <td><span class="check">✓</span> Tiered plans from £125/month</td>
+                            <td><span class="cross">✗</span> Per-user fees add up fast</td>
+                        </tr>
+                        <tr class="highlight">
                             <td><strong>Data ownership</strong></td>
                             <td><span class="check">✓</span> You own all your data</td>
                             <td>Data locked in their system</td>
                         </tr>
-                        <tr class="highlight">
-                            <td><strong>Real-time sync</strong></td>
-                            <td><span class="check">✓</span> Instant updates everywhere</td>
-                            <td>Often delayed sync</td>
-                        </tr>
                         <tr>
-                            <td><strong>Typical monthly cost</strong></td>
-                            <td><strong>£350/month all-inclusive</strong></td>
-                            <td>£300-600+/month (grows with users)</td>
+                            <td><strong>10 users example</strong></td>
+                            <td><strong>£275/month (includes website)</strong></td>
+                            <td>£340/month + website costs</td>
                         </tr>
                     </tbody>
                 </table>
@@ -1439,62 +1444,121 @@
         <div class="section pricing-section">
             <div class="section-header">
                 <h2>Monthly Hosting & Maintenance</h2>
-                <p>Choose the package that fits your needs</p>
+                <p>Flexible pricing that scales with your team — website included with every plan</p>
             </div>
 
-            <div class="pricing-grid">
-                <!-- Web Only Package -->
-                <div class="pricing-box">
-                    <div class="plan-name">Web App Only</div>
-                    <div class="plan-desc">Office management from any browser</div>
-                    <div class="price">£200<span>/month</span></div>
-
-                    <div class="includes">
-                        <h4>What's Included:</h4>
-                        <ul>
-                            <li>Full web dashboard & database</li>
-                            <li>Customer & job management</li>
-                            <li>Quotes & invoice generation</li>
-                            <li>Staff scheduling & calendar</li>
-                            <li>Team messaging (web only)</li>
-                            <li>Real-time data sync</li>
-                            <li>Email delivery for quotes/invoices</li>
-                            <li>SSL security & backups</li>
-                            <li>Bug fixes & maintenance</li>
-                            <li>Technical support</li>
-                            <li class="excluded">Employee mobile apps</li>
-                            <li class="excluded">Mobile clock in/out</li>
-                            <li class="excluded">Push notifications</li>
-                        </ul>
+            <!-- Web App Only Tiers -->
+            <div style="margin-bottom: 40px;">
+                <h3 style="color: var(--white); text-align: center; margin-bottom: 20px; font-size: 1.3rem;">Web App Only</h3>
+                <p style="text-align: center; color: rgba(255,255,255,0.7); margin-bottom: 25px;">Office management from any browser</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; max-width: 800px; margin: 0 auto;">
+                    <div class="pricing-box">
+                        <div class="plan-name">Starter</div>
+                        <div class="plan-desc">Up to 5 users</div>
+                        <div class="price">£125<span>/month</span></div>
+                        <div style="margin-top: 15px; padding: 10px; background: var(--accent-light); border-radius: 8px; font-size: 0.85rem; color: var(--primary);">
+                            Website + hosting included
+                        </div>
+                    </div>
+                    <div class="pricing-box">
+                        <div class="plan-name">Growth</div>
+                        <div class="plan-desc">Up to 10 users</div>
+                        <div class="price">£175<span>/month</span></div>
+                        <div style="margin-top: 15px; padding: 10px; background: var(--accent-light); border-radius: 8px; font-size: 0.85rem; color: var(--primary);">
+                            Website + hosting included
+                        </div>
+                    </div>
+                    <div class="pricing-box">
+                        <div class="plan-name">Unlimited</div>
+                        <div class="plan-desc">Unlimited users</div>
+                        <div class="price">£225<span>/month</span></div>
+                        <div style="margin-top: 15px; padding: 10px; background: var(--accent-light); border-radius: 8px; font-size: 0.85rem; color: var(--primary);">
+                            Website + hosting included
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Full Platform Package -->
-                <div class="pricing-box recommended">
-                    <span class="badge">Recommended</span>
-                    <div class="plan-name">Full Platform</div>
-                    <div class="plan-desc">Web + Employee Mobile Apps</div>
-                    <div class="price">£350<span>/month</span></div>
+            <!-- Full Platform Tiers -->
+            <div>
+                <h3 style="color: var(--white); text-align: center; margin-bottom: 20px; font-size: 1.3rem;">Full Platform <span style="background: var(--accent); padding: 4px 12px; border-radius: 15px; font-size: 0.7rem; vertical-align: middle; margin-left: 10px;">RECOMMENDED</span></h3>
+                <p style="text-align: center; color: rgba(255,255,255,0.7); margin-bottom: 25px;">Web Dashboard + iOS & Android Employee Apps</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto;">
+                    <div class="pricing-box">
+                        <div class="plan-name">Starter</div>
+                        <div class="plan-desc">Up to 5 users</div>
+                        <div class="price">£175<span>/month</span></div>
+                        <div style="margin-top: 15px; padding: 10px; background: var(--accent-light); border-radius: 8px; font-size: 0.85rem; color: var(--primary);">
+                            Website + mobile apps included
+                        </div>
+                    </div>
+                    <div class="pricing-box">
+                        <div class="plan-name">Growth</div>
+                        <div class="plan-desc">Up to 10 users</div>
+                        <div class="price">£275<span>/month</span></div>
+                        <div style="margin-top: 15px; padding: 10px; background: var(--accent-light); border-radius: 8px; font-size: 0.85rem; color: var(--primary);">
+                            Website + mobile apps included
+                        </div>
+                    </div>
+                    <div class="pricing-box recommended">
+                        <span class="badge">Most Popular</span>
+                        <div class="plan-name">Business</div>
+                        <div class="plan-desc">Up to 20 users</div>
+                        <div class="price">£350<span>/month</span></div>
+                        <div style="margin-top: 15px; padding: 10px; background: var(--accent-light); border-radius: 8px; font-size: 0.85rem; color: var(--primary);">
+                            Website + mobile apps included
+                        </div>
+                    </div>
+                    <div class="pricing-box">
+                        <div class="plan-name">Unlimited</div>
+                        <div class="plan-desc">Unlimited users</div>
+                        <div class="price">£425<span>/month</span></div>
+                        <div style="margin-top: 15px; padding: 10px; background: var(--accent-light); border-radius: 8px; font-size: 0.85rem; color: var(--primary);">
+                            Website + mobile apps included
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                    <div class="includes">
-                        <h4>Everything Included:</h4>
-                        <ul>
-                            <li>Full web dashboard & database</li>
-                            <li>Customer & job management</li>
-                            <li>Quotes & invoice generation</li>
-                            <li>Staff scheduling & calendar</li>
-                            <li>Team messaging (all platforms)</li>
-                            <li>Real-time data sync</li>
-                            <li>Email delivery for quotes/invoices</li>
-                            <li>SSL security & backups</li>
-                            <li>Bug fixes & maintenance</li>
-                            <li>Technical support</li>
-                            <li>iOS & Android employee apps</li>
-                            <li>Mobile clock in/out for field staff</li>
-                            <li>View & manage jobs on the move</li>
-                            <li>Start/complete jobs on-site</li>
-                            <li>Push notifications for new jobs</li>
-                        </ul>
+            <!-- What's Included -->
+            <div style="margin-top: 40px; background: rgba(255,255,255,0.1); border-radius: 12px; padding: 25px;">
+                <h4 style="color: var(--white); margin-bottom: 20px; text-align: center;">All Plans Include</h4>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
+                    <div style="display: flex; align-items: center; gap: 8px; color: var(--white); font-size: 0.9rem;">
+                        <span style="color: var(--accent);">✓</span> Professional business website
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px; color: var(--white); font-size: 0.9rem;">
+                        <span style="color: var(--accent);">✓</span> Website hosting & SSL
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px; color: var(--white); font-size: 0.9rem;">
+                        <span style="color: var(--accent);">✓</span> Full web dashboard
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px; color: var(--white); font-size: 0.9rem;">
+                        <span style="color: var(--accent);">✓</span> Customer & job management
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px; color: var(--white); font-size: 0.9rem;">
+                        <span style="color: var(--accent);">✓</span> Quotes & invoicing
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px; color: var(--white); font-size: 0.9rem;">
+                        <span style="color: var(--accent);">✓</span> Staff scheduling
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px; color: var(--white); font-size: 0.9rem;">
+                        <span style="color: var(--accent);">✓</span> Team messaging
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px; color: var(--white); font-size: 0.9rem;">
+                        <span style="color: var(--accent);">✓</span> Real-time sync
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px; color: var(--white); font-size: 0.9rem;">
+                        <span style="color: var(--accent);">✓</span> Daily backups
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px; color: var(--white); font-size: 0.9rem;">
+                        <span style="color: var(--accent);">✓</span> Bug fixes & updates
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px; color: var(--white); font-size: 0.9rem;">
+                        <span style="color: var(--accent);">✓</span> Technical support
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px; color: var(--white); font-size: 0.9rem;">
+                        <span style="color: var(--accent);">✓</span> 100% your branding
                     </div>
                 </div>
             </div>
@@ -1563,11 +1627,11 @@
                     <!-- Your Solution -->
                     <div style="background: var(--accent); border-radius: 12px; padding: 25px; color: var(--white);">
                         <div style="font-weight: 700; font-size: 1.1rem; margin-bottom: 5px;">Your Custom Platform</div>
-                        <div style="font-size: 0.85rem; opacity: 0.9; margin-bottom: 15px;">Built specifically for Clean & Tidy</div>
-                        <div style="font-size: 1.8rem; font-weight: 700;">£350<span style="font-size: 0.9rem; font-weight: 400; opacity: 0.9;">/month</span></div>
-                        <div style="font-size: 0.8rem; opacity: 0.9; margin-bottom: 10px;">UNLIMITED users included</div>
+                        <div style="font-size: 0.85rem; opacity: 0.9; margin-bottom: 15px;">Software + Website included</div>
+                        <div style="font-size: 1.8rem; font-weight: 700;">£175<span style="font-size: 0.9rem; font-weight: 400; opacity: 0.9;">/month</span></div>
+                        <div style="font-size: 0.8rem; opacity: 0.9; margin-bottom: 10px;">Starting price (5 users + mobile apps)</div>
                         <div style="font-size: 0.85rem; padding: 10px; background: rgba(255,255,255,0.2); border-radius: 8px;">
-                            No per-user fees ever
+                            Website included at every tier
                         </div>
                     </div>
                 </div>
@@ -1595,7 +1659,7 @@
                 </div>
 
                 <p style="text-align: center; margin-top: 25px; color: rgba(255,255,255,0.9); font-size: 0.95rem;">
-                    <strong>Key difference:</strong> Competitors only provide software — you'd still need to pay separately for a website. Your platform includes everything: business management software <strong>AND</strong> a professional website, all for £350/month with unlimited users.
+                    <strong>Key difference:</strong> Competitors only provide software — you'd still need to pay separately for a website. Your platform includes everything: business management software <strong>AND</strong> a professional website. At every tier, you're getting more value.
                 </p>
             </div>
         </div>
@@ -1635,24 +1699,24 @@
 
             <div class="benefits-grid">
                 <div class="benefit-card">
-                    <div class="icon">⚡</div>
-                    <h4>All-in-One</h4>
-                    <p>Replace multiple tools with one integrated system</p>
+                    <div class="icon">🌐</div>
+                    <h4>Website Included</h4>
+                    <p>Professional business website + hosting at no extra cost</p>
                 </div>
                 <div class="benefit-card">
                     <div class="icon">📱</div>
                     <h4>Mobile Ready</h4>
-                    <p>Full functionality on phones and tablets</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="icon">🔄</div>
-                    <h4>Real-Time</h4>
-                    <p>Changes sync instantly across all devices</p>
+                    <p>Native iOS & Android apps for your field team</p>
                 </div>
                 <div class="benefit-card">
                     <div class="icon">💷</div>
-                    <h4>Fixed Cost</h4>
-                    <p>Predictable monthly expense, no surprises</p>
+                    <h4>Competitive Pricing</h4>
+                    <p>Tiered plans that beat competitor pricing</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon">⚡</div>
+                    <h4>All-in-One</h4>
+                    <p>Software + website in one integrated system</p>
                 </div>
             </div>
         </div>
@@ -1667,7 +1731,7 @@
 
     <div class="footer">
         <p><strong>Clean & Tidy Services - Business Management Platform</strong></p>
-        <p>Custom-built web & mobile solution</p>
+        <p>Custom-built website, web app & mobile solution</p>
         <p style="margin-top: 15px; font-size: 0.85rem;">Proposal prepared December 2024</p>
     </div>
 </body>
