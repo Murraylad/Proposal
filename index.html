@@ -96,7 +96,7 @@
         /* Platform Overview Cards */
         .platform-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 25px;
             margin-top: 30px;
         }
@@ -669,10 +669,44 @@
             margin-bottom: 5px;
         }
 
+        /* Pricing tier grids */
+        .pricing-tier-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .pricing-tier-grid.full-platform {
+            max-width: 1000px;
+        }
+
+        /* Competitor pricing grid */
+        .competitor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        /* All plans include grid */
+        .all-plans-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+        }
+
+        /* Competitor extras grid */
+        .extras-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
         /* Responsive - Tablet */
         @media (max-width: 900px) {
             .platform-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
             }
             .feature-grid,
             .feature-list {
@@ -686,6 +720,9 @@
             }
             .support-grid {
                 grid-template-columns: 1fr;
+            }
+            .competitor-grid {
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             }
         }
 
@@ -746,13 +783,17 @@
                 font-size: 1.2rem;
             }
 
-            /* Feature cards */
+            /* Feature cards - center on mobile */
             .feature-card {
                 padding: 20px;
+                border-left: none !important;
+                border-top: 4px solid var(--accent);
+                text-align: center;
             }
 
             .feature-card h4 {
                 font-size: 1.1rem;
+                justify-content: center;
             }
 
             .feature-card h4::before {
@@ -761,9 +802,10 @@
                 font-size: 0.75rem;
             }
 
-            /* Feature list items */
+            /* Feature list items - center on mobile */
             .feature-item {
                 padding: 12px 15px;
+                justify-content: center;
             }
 
             .feature-item .check {
@@ -820,6 +862,11 @@
                 font-size: 0.8rem;
             }
 
+            /* Platform grid - single column on mobile */
+            .platform-grid {
+                grid-template-columns: 1fr;
+            }
+
             /* Employee apps - stack on mobile */
             .employee-apps {
                 grid-template-columns: 1fr;
@@ -828,6 +875,11 @@
 
             .app-card {
                 padding: 25px 20px;
+            }
+
+            .app-card .app-header {
+                justify-content: center;
+                text-align: center;
             }
 
             .app-card .app-icon {
@@ -846,6 +898,12 @@
             .domain-section h3 {
                 font-size: 1.1rem;
                 flex-wrap: wrap;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .domain-section p {
+                text-align: center;
             }
 
             .domain-steps {
@@ -874,6 +932,56 @@
             .pricing-grid {
                 grid-template-columns: 1fr;
                 gap: 30px;
+            }
+
+            .pricing-tier-grid,
+            .pricing-tier-grid.full-platform {
+                grid-template-columns: 1fr;
+                max-width: 100%;
+            }
+
+            /* Comparison table - hide generic column on mobile */
+            .table-wrapper table {
+                min-width: 0;
+            }
+
+            .comparison-table th:last-child,
+            .comparison-table td:last-child {
+                display: none;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 14px 12px;
+                font-size: 0.85rem;
+                text-align: center;
+            }
+
+            .comparison-table th:first-child,
+            .comparison-table td:first-child {
+                text-align: left;
+            }
+
+            .competitor-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .all-plans-grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* Center the all-plans items on mobile */
+            .all-plans-grid > div {
+                justify-content: center;
+            }
+
+            .extras-grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* Center extras items on mobile */
+            .extras-grid > div {
+                justify-content: center;
             }
 
             .pricing-box {
@@ -933,6 +1041,7 @@
                 width: 100%;
                 padding: 16px 30px;
                 font-size: 1rem;
+                text-align: center;
             }
 
             /* Footer */
@@ -996,11 +1105,11 @@
                 <p>One platform across all devices to manage your entire business</p>
             </div>
 
-            <div class="platform-grid" style="grid-template-columns: repeat(4, 1fr);">
+            <div class="platform-grid">
                 <div class="platform-card">
                     <div class="icon">🌐</div>
                     <h3>Business Website</h3>
-                    <p>Professional website with hosting included at no extra cost</p>
+                    <p>Professional website with hosting included</p>
                 </div>
                 <div class="platform-card">
                     <div class="icon">🖥️</div>
@@ -1451,7 +1560,7 @@
             <div style="margin-bottom: 40px;">
                 <h3 style="color: var(--white); text-align: center; margin-bottom: 20px; font-size: 1.3rem;">Web App Only</h3>
                 <p style="text-align: center; color: rgba(255,255,255,0.7); margin-bottom: 25px;">Office management from any browser</p>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; max-width: 800px; margin: 0 auto;">
+                <div class="pricing-tier-grid">
                     <div class="pricing-box">
                         <div class="plan-name">Starter</div>
                         <div class="plan-desc">Up to 5 users</div>
@@ -1483,7 +1592,7 @@
             <div>
                 <h3 style="color: var(--white); text-align: center; margin-bottom: 20px; font-size: 1.3rem;">Full Platform <span style="background: var(--accent); padding: 4px 12px; border-radius: 15px; font-size: 0.7rem; vertical-align: middle; margin-left: 10px;">RECOMMENDED</span></h3>
                 <p style="text-align: center; color: rgba(255,255,255,0.7); margin-bottom: 25px;">Web Dashboard + iOS & Android Employee Apps</p>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto;">
+                <div class="pricing-tier-grid full-platform">
                     <div class="pricing-box">
                         <div class="plan-name">Starter</div>
                         <div class="plan-desc">Up to 5 users</div>
@@ -1523,7 +1632,7 @@
             <!-- What's Included -->
             <div style="margin-top: 40px; background: rgba(255,255,255,0.1); border-radius: 12px; padding: 25px;">
                 <h4 style="color: var(--white); margin-bottom: 20px; text-align: center;">All Plans Include</h4>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
+                <div class="all-plans-grid">
                     <div style="display: flex; align-items: center; gap: 8px; color: var(--white); font-size: 0.9rem;">
                         <span style="color: var(--accent);">✓</span> Professional business website
                     </div>
@@ -1568,7 +1677,7 @@
                 <h3 style="text-align: center; color: var(--white); margin-bottom: 10px; font-size: 1.5rem;">How Competitors Compare</h3>
                 <p style="text-align: center; color: rgba(255,255,255,0.8); margin-bottom: 30px;">Most job management software charges per user — costs add up fast as your team grows</p>
 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                <div class="competitor-grid">
                     <!-- Competitor 1 -->
                     <div style="background: var(--white); border-radius: 12px; padding: 25px; color: var(--text);">
                         <div style="font-weight: 700; color: var(--primary); font-size: 1.1rem; margin-bottom: 5px;">Jobber</div>
@@ -1638,7 +1747,7 @@
 
                 <div style="margin-top: 30px; background: rgba(255,255,255,0.15); border-radius: 12px; padding: 25px;">
                     <h4 style="color: var(--white); margin-bottom: 15px; text-align: center;">What's Included That Competitors Don't Offer</h4>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                    <div class="extras-grid">
                         <div style="display: flex; align-items: center; gap: 10px; color: var(--white);">
                             <span style="background: var(--accent); padding: 5px 10px; border-radius: 6px;">+</span>
                             <span>Professional business website</span>
@@ -1725,7 +1834,7 @@
         <div class="cta-section">
             <h2>Ready to Get Started?</h2>
             <p>Your complete business management platform is ready to go. Let's discuss the domain transfer and get you up and running.</p>
-            <a href="https://clean-tidy.vercel.app" target="_blank" class="cta-button">View Your Platform →</a>
+            <a href="https://www.cleanandtidy.scot/" target="_blank" class="cta-button">View Your Platform →</a>
         </div>
     </div>
 
